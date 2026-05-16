@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STABLE | Simulation-Ready Tabletop Layout Generation</title>
+    <meta
+      name="description"
+      content="STABLE: Simulation-Ready Tabletop Layout Generation via a Semantics-Physics Dual System."
+    >
+    <link rel="stylesheet" href="styles.css?v=20260515f">
+  </head>
+  <body>
+    <main id="top">
+      <section class="hero">
+        <h1 class="title is-1 publication-title logo-title">
+          <span style="color: rgb(240, 0, 20);">S</span><span style="color: rgb(215, 8, 50);">T</span><span style="color: rgb(180, 10, 85);">A</span><span style="color: rgb(145, 12, 120);">B</span><span style="color: rgb(105, 28, 160);">L</span><span style="color: rgb(70, 55, 190);">E</span>
+        </h1>
+        <h3 class="title is-3 publication-title">
+          Simulation-Ready Tabletop Layout Generation via a Semantics-Physics Dual System
+        </h3>
+
+        <div class="is-size-5 publication-authors" aria-label="Authors">
+          <span class="author-block">Zhen Luo<sup>1,2,*</sup>,</span>
+          <span class="author-block">Yixuan Yang<sup>2,3,*</sup>,</span>
+          <span class="author-block">Xudong Xu<sup>3,&dagger;</sup>,</span>
+          <span class="author-block">Jinkun Hao<sup>4</sup>,</span>
+          <span class="author-block">Zhaoyang Lyu<sup>3</sup>,</span>
+          <span class="author-block">Feng Zheng<sup>2,6,&dagger;</sup>,</span>
+          <span class="author-block">Jiangmiao Pang<sup>3</sup>,</span>
+          <span class="author-block">Yanwei Fu<sup>1,5</sup></span>
+        </div>
+
+        <div class="is-size-5 publication-authors" aria-label="Affiliations">
+          <span class="author-block">
+            SII<sup>1</sup>, SUSTech<sup>2</sup>, Shanghai AI Laboratory<sup>3</sup>,
+            SJTU<sup>4</sup>, FDU<sup>5</sup>, Spatialtemporal AI<sup>6</sup>
+          </span>
+        </div>
+
+        <div class="publication-notes">
+          <span>*Equal contribution.</span>
+          <span>&dagger;Corresponding authors.</span>
+        </div>
+
+        <div class="is-size-5 publication-authors conference-line">
+          <span class="has-text-weight-bold">ICML 2026</span>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="publication-links" aria-label="Project links">
+            <span class="link-block">
+              <a href="assets/STABLE-paper.pdf" class="external-link button is-normal is-rounded is-dark">
+                <span>Paper</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="" class="external-link button is-normal is-rounded is-dark">
+                <span>arXiv</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="" class="external-link button is-normal is-rounded is-dark">
+                <span>Code</span>
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <p class="tldr">
+          <strong class="tldr-label">TL;DR:</strong>
+          <em>STABLE</em> couples an LLM-based Semantic Reasoner with a geometry-aware Physics Corrector to generate
+          task-aligned, collision-free tabletop scenes that are ready for simulation and robot manipulation.
+        </p>
+
+        <figure class="teaser-figure">
+          <img src="assets/figures/teaser.png" alt="STABLE overview for tabletop scene generation">
+        </figure>
+      </section>
+
+      <section id="main-video" class="section">
+        <div class="section-heading centered">
+          <h2>OVERVIEW VIDEO</h2>
+          <p class="section-subtitle">From task instructions to simulation-ready scenes</p>
+        </div>
+        <div class="video-frame large-video">
+          <video controls playsinline preload="metadata" poster="assets/figures/teaser.png">
+            <source src="assets/videos/main-result.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+      <section id="videos" class="section">
+        <div class="section-heading centered">
+          <h2>Robot Operation Videos</h2>
+          <p class="section-subtitle">Generated scenes for manipulation rollouts.</p>
+        </div>
+        <div class="robot-video-grid">
+          <article class="robot-slot" data-video="assets/videos/robot-scene-1.mp4">
+            <div class="slot-media">
+              <video controls playsinline preload="metadata" aria-label="Generated robot operation scene 1"></video>
+              <div class="slot-placeholder">
+                <span>Scene 01</span>
+                <strong>Video slot reserved</strong>
+                <p>Place the first manipulation video at <code>assets/videos/robot-scene-1.mp4</code>.</p>
+              </div>
+            </div>
+            <h3>Generated Scene 01</h3>
+          </article>
+          <article class="robot-slot" data-video="assets/videos/robot-scene-2.mp4">
+            <div class="slot-media">
+              <video controls playsinline preload="metadata" aria-label="Generated robot operation scene 2"></video>
+              <div class="slot-placeholder">
+                <span>Scene 02</span>
+                <strong>Video slot reserved</strong>
+                <p>Place the second manipulation video at <code>assets/videos/robot-scene-2.mp4</code>.</p>
+              </div>
+            </div>
+            <h3>Generated Scene 02</h3>
+          </article>
+        </div>
+      </section>
+
+      <section id="results" class="section visual-section">
+        <div class="section-heading">
+          <h2>Visualization Results</h2>
+          <p class="section-subtitle">Task-aligned layouts with fewer physical failures.</p>
+          <p class="section-copy">
+            Qualitative comparisons highlight common baseline failures, including interpenetration, missing
+            task objects, and broken spatial relations. STABLE preserves task semantics while producing
+            simulation-ready tabletop geometry.
+          </p>
+        </div>
+        <figure class="wide-figure">
+          <img src="assets/figures/qual_results.png" alt="Qualitative comparison with baseline methods">
+        </figure>
+      </section>
+
+      <section class="section visual-section">
+        <div class="section-heading">
+          <h2>Applications</h2>
+          <p class="section-subtitle">Editing and rearrangement.</p>
+        </div>
+        <div class="application-stack">
+          <figure>
+            <img src="assets/figures/editing.png" alt="Incremental scene editing examples">
+            <figcaption>Incremental editing preserves scene semantics while modifying local layout structure.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/figures/rearrange.png" alt="Tabletop rearrangement examples">
+            <figcaption>The Physics Corrector recovers physically consistent tabletop rearrangements.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="method" class="section visual-section">
+        <div class="section-heading">
+          <h2>Method</h2>
+          <p class="section-subtitle">A progressive semantics-physics loop.</p>
+          <p class="section-copy">
+            STABLE alternates semantic scene construction with physics-aware pose correction, expanding from
+            task-critical objects to contextual background objects while keeping each intermediate layout feasible.
+          </p>
+        </div>
+        <figure class="wide-figure">
+          <img src="assets/figures/method.png" alt="STABLE method overview">
+        </figure>
+      </section>
+
+      <section id="citation" class="section citation-section">
+        <div class="section-heading centered">
+          <h2>Citation</h2>
+          <p class="section-subtitle">BibTeX</p>
+        </div>
+        <div class="citation-box">
+          <button class="copy-button" type="button" data-copy-target="stable-bibtex">Copy</button>
+          <pre id="stable-bibtex"><code>@inproceedings{luo2026stable,
+  title = {STABLE: Simulation-Ready Tabletop Layout Generation via a Semantics-Physics Dual System},
+  author = {Luo, Zhen and Yang, Yixuan and Xu, Xudong and Hao, Jinkun and
+            Lyu, Zhaoyang and Zheng, Feng and Pang, Jiangmiao and Fu, Yanwei},
+  booktitle = {International Conference on Machine Learning},
+  year = {2026}
+}</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>*Equal contribution. &dagger;Corresponding authors.</p>
+    </footer>
+
+    <script src="script.js?v=20260515b"></script>
+  </body>
+</html>
