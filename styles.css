@@ -441,18 +441,6 @@ code {
   font-size: 14px;
 }
 
-.footer {
-  padding: 28px 20px;
-  border-top: 1px solid var(--line);
-  background: var(--soft);
-  color: var(--muted);
-  text-align: center;
-}
-
-.footer p {
-  margin: 0;
-}
-
 @media (max-width: 900px) {
   .hero,
   .section {
